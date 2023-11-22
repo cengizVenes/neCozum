@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+svg
+{
+    fill: #000;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #c4c4c4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+.br3px {
+    border: 3px solid #000;
+}
+
+.br2px {
+    border: 2px solid #000;
+}
+
+.br1px {
+    border: 1px solid #000;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.GreenButton {
+    border: 3px solid transparent !important;
+    transition: .3s;
+}
+
+.GreenButton:hover {
+    background-color: transparent;
+    border: 3px solid #28E98C !important;
+    color: #28E98C !important;
+}
+
+.SocialMedia {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    background-color: transparent;
+}
+
+.SocialMedia:hover {
+    transition: .3s;
+    border: 3px solid #28E98C !important;
+}
+
+.SocialMediaIcon {
+    fill: #000;
+    transition: .3s;
+}
+
+.SocialMedia:hover .SocialMediaIcon {
+    fill: #28E98C !important;
+}
+
+.py-25 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+
+}
+
+/* Background Color */
+.bg28E98C {
+    background-color: #28E98C;
+}
+
+.bgC4C4C4 {
+    background-color: #c4c4c4;
+}
+#bgFFF
+{
+    background-color: #FFF;
+}
+
+
+
+/* Color */
+.color28E98C {
+    color: #28E98C;
+}
+.color000
+{
+    color: #000;
+}
+
+.color545454 {
+    color: #545454;
+}
+
+.color707070 {
+    color: #707070;
+}
+
+.color4C1515 {
+    color: #4C1515;
+}
+
+/* Font Size */
+
+.fs12 {
+    font-size: 12px;
+}
+
+.fs13 {
+    font-size: 13px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs64 {
+    font-size: 64px;
+}
+
+
+
+.infineteAnimation {
+    animation: infineteAnimation 3s infinite linear;
+}
+
+.infineteAnimation2 {
+    animation: infineteAnimation 5s infinite linear;
+}
+
+@keyframes infineteAnimation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.top48px {
+    top: 48px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.wh150 {
+    width: 150px;
+    height: 150px;
+}
+
+.wh120 {
+    width: 120px;
+    height: 120px;
+}
+
+.wh50 {
+    width: 50px;
+    height: 50px;
+}
+
+.maxWidth540 {
+    max-width: 540px;
+}
+
+.maxWidth330 {
+    max-width: 330px;
+}
+
+/* Acordion */
+
+.accordion-button {
+    color: black;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-shadow: none;
+    margin-bottom: 15px;
+    border-radius: 1rem !important;
+}
+
+.accordion-button:focus {
+    color: black;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-shadow: none;
+    border-radius: 1rem !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-bottom: transparent;
+    box-shadow: none;
+    margin: 0;
+    border-radius: 1rem !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.accordion-button::after
+{
+    width: 15px;
+    height: 15px;
+    background-image: none;
+    background-color: #000;
+    clip-path: polygon( 49.586% 99.975%,49.586% 99.975%,50.429% 100.805%,51.351% 101.451%,52.334% 101.912%,53.356% 102.188%,54.398% 102.281%,55.44% 102.188%,56.462% 101.912%,57.444% 101.451%,58.367% 100.805%,59.21% 99.975%,100% 52.766%,100% 52.766%,100.717% 51.79%,101.275% 50.723%,101.673% 49.586%,101.912% 48.403%,101.992% 47.197%,101.912% 45.991%,101.673% 44.808%,101.275% 43.671%,100.717% 42.603%,100% 41.628%,100% 41.628%,99.157% 40.798%,98.234% 40.152%,97.252% 39.691%,96.23% 39.415%,95.188% 39.323%,94.146% 39.415%,93.124% 39.691%,92.142% 40.152%,91.219% 40.798%,90.376% 41.628%,54.387% 83.28%,18.398% 41.652%,18.398% 41.652%,17.555% 40.822%,16.632% 40.177%,15.65% 39.716%,14.628% 39.439%,13.586% 39.347%,12.544% 39.439%,11.522% 39.716%,10.54% 40.177%,9.617% 40.822%,8.774% 41.652%,8.774% 41.652%,8.057% 42.628%,7.499% 43.696%,7.101% 44.833%,6.862% 46.016%,6.782% 47.222%,6.862% 48.427%,7.101% 49.61%,7.499% 50.747%,8.057% 51.815%,8.774% 52.791%,49.564% 100% );
+    background-position: center;
+}
+.acordionColor
+{
+    color: #000;
+}
+.accordion-body {
+    border: 2px solid #000;
+    border-top: none;
+    margin-bottom: 15px;
+    border-radius: 1rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-item:focus {
+    color: black;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-shadow: none;
+}
+
+.underLine::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    transition: .3s;
+    background-color: #000;
+}
+
+.accordion-button:not(.collapsed) .underLine::after {
+    width: 100%;
+}
+
+input {
+    color: #545454;
+}
+
+.underLine2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: .3s;
+    background-color: #545454;
+}
+
+.underLine:hover::after {
+    content: "";
+    width: 100%;
+
+}
+
+.disNone {
+    display: none;
+}
+
+/* Carousel Navigation */
+
+
+
+
+.calcWidth {
+    width: calc(90%/2)
+}
+
+.brNone {
+    border: none;
+}
+
+.brNone:focus-visible {
+    outline: none;
+}
+
+.buttonHover {
+    transition: .3s;
+}
+
+.buttonHover:hover {
+    border-color: #28E98C !important;
+}
+
+.heightHover {
+    width: 49px;
+    transition: .3s;
+    height: 49px;
+}
+
+.heightHover:hover {
+    height: 92px;
+}
+
+.moon {
+    transition: .8s;
+}
+
+.heightHover:hover .moon {
+    opacity: 1 !important;
+}
+
+.top77px {
+    top: 77px;
+}
+
+.stillMenu a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stillMenu a:hover>svg {
+    fill: #28E98C !important;
+}
+
+.stillMenu a>svg {
+    transition: .3s;
+    fill: #000;
+}
+
+.w60 {
+    width: 60px;
+}
+
+.bgimage {
+    background-image: url(../images/Vİdeolu\ anlatım\ için\ tıklayın.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Location {
+    transform: translate(25vw, -50%);
+}
+
+/* CheckBox */
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: 0;
+    opacity: 0.01;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 2.3em;
+    font-size: 14px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #aaa;
+    background: #FFF;
+    border-radius: .2em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1), 0 0 0 rgba(203, 34, 237, .2);
+    -webkit-transition: all .275s;
+    transition: all .275s;
+}
+
+[type="checkbox"]:checked+label:before {
+    clip-path: polygon(0% 0%, 48.13% 0%, 100% 0%, 99.75% 47.63%, 100% 100%, 49.88% 100%, 0% 100%, 9.98% 89.78%, 49.88% 89.59%, 89.78% 89.78%, 89.78% 49.88%, 89.78% 9.98%, 49.88% 9.98%, 37.41% 41.24%, 27.47% 42.79%, 27.47% 42.55%, 33.45% 64.87%, 49.88% 65.22%, 74.81% 32.61%, 67.54% 26.87%, 42.12% 56.43%, 37.41% 41.24%, 49.88% 9.98%, 90.25% 9.76%, 89.78% 49.88%, 89.96% 90.75%, 49.88% 94.67%, 7.06% 91.57%, 9.98% 49.88%, 8.57% 6.98%, 35.34% 6.1%, 49.88% 9.98%, 9.98% 9.98%, 10.16% 49.88%, 9.98% 89.78%, 0% 100%, 0% 49.38%);
+    background-color: #000000;
+    border-color: #000000;
+
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+    content: '';
+    position: absolute;
+    top: .525em;
+    left: .18em;
+    font-size: 14px;
+    background-color: #CB22ED !important;
+    line-height: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(45deg);
+    transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.px30 {
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.maxWidth1000 {
+    max-width: 1000px;
+}
+
+.maxHeight410 {
+    max-height: 410px;
+}
+.GreenHover:hover
+{
+    color:#28E98C!important;
+}
+.hoverUnderline:hover
+{
+    text-decoration: underline !important;
+}

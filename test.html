@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <h1>Dark/Light Mode Toggle</h1>
+    <label for="mode-toggle">Toggle Dark/Light Mode</label>
+    <input type="checkbox" id="mode-toggle">
+    <span>dawdada</span>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modeToggle = document.getElementById("mode-toggle");
+
+            // Check if user has a preference in local storage
+            const savedMode = localStorage.getItem("mode");
+            if (savedMode) {
+                document.body.classList.add(savedMode);
+                modeToggle.checked = savedMode === "dark-mode";
+            }
+
+            // Toggle mode when the checkbox changes
+            modeToggle.addEventListener("change", function () {
+                if (modeToggle.checked) {
+                    document.body.classList.add("dark-mode");
+                    localStorage.setItem("mode", "dark-mode");
+                } else {
+                    document.body.classList.remove("dark-mode");
+                    localStorage.setItem("mode", "light-mode");
+                }
+            });
+        });
+    </script>
+</body>
+<style>
+    body {
+        transition: background-color 0.3s ease;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    body.dark-mode {
+        background-color: #333;
+        color: #fff;
+    }
+    span
+    {
+        color: pink;
+    }
+    span.dark-mode{
+        color: pink !important ;
+    }
+</style>
+
+</html>
