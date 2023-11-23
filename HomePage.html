@@ -136,7 +136,7 @@
                             <div data-aos="fade-up" data-aos-duration="1250"
                                 class="modeDL br2px rounded-top-pill rounded-bottom-pill px-1 py-2 heightHover me-2">
                                 <div>
-                                    <button onclick="LightMode()" class="border-0 bg-transparent">
+                                    <button id="lightButton" onclick="setColorMode('light')" class="border-0 bg-transparent">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class=""
                                             viewBox="0 0 30 30" fill="none">
                                             <g clip-path="url(#clip0_27_2039)">
@@ -152,7 +152,7 @@
                                     </button>
                                 </div>
                                 <div class="mt-2">
-                                    <button onclick="DarkMode()" class="border-0 bg-transparent opacity-0 moon">
+                                    <button id="darkButton" onclick="setColorMode('dark')" class="border-0 bg-transparent opacity-0 moon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35"
                                             viewBox="0 0 30 40" fill="none">
                                             <g clip-path="url(#clip0_27_2041)">
@@ -755,24 +755,6 @@
 <script src="js/style.js"></script>
 
 <script>
-    function myFunction() {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("btnMore");
-        var btnIcon = document.getElementById("btnicon");
-
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Devamı...";
-            moreText.style.display = "none";
-            btnIcon.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Daha az";
-            moreText.style.display = "inline";
-            btnIcon.style.display = "block";
-        }
-    }
 
 </script>
 <script>
@@ -789,64 +771,7 @@
     }
 </script>
 <script>
-    function DarkMode() {
-        // Sayfanın body elementini seçme
-        var bodys = document.body;
-        var buttons = document.getElementsByTagName("button");
-        var divElements = document.getElementsByTagName("div");
-        var svgs = document.getElementsByTagName("svg");
-        var span = document.getElementsByClassName("acordionColor");
-        var setings = document.getElementById("bgFFF");
-        var downarrow = document.getElementById("downarrow");
-        // Şimdi body elementine bir özellik ekleyebilir veya üzerinde değişiklik yapabilirsiniz
-        bodys.style.backgroundColor = "#000"; // Örneğin, arka plan rengini değiştirelim
-        bodys.style.color = "#fff"; // Örneğin, arka plan rengini değiştirelim
-        for (var i = 0; i < divElements.length; i++) {
-            divElements[i].style.borderColor = '#fff';
-        }
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].style.borderColor = '#fff';
-            buttons[i].style.color = '#fff';
-        }
-        for (var i = 0; i < svgs.length; i++) {
-            svgs[i].style.fill = '#fff';
-        }
-        for (var i = 0; i < span.length; i++) {
-            span[i].style.color = '#fff';
-        }
-        setings.style.backgroundColor = "#000";
-        downarrow.style.color = "#fff";
-    }
-</script>
-<script>
-    function LightMode() {
-        // Sayfanın body elementini seçme
-        var bodys = document.body;
-        var buttons = document.getElementsByTagName("button");
-        var divElements = document.getElementsByTagName("div");
-        var span = document.getElementsByClassName("acordionColor");
-        var svgs = document.getElementsByTagName("svg");
-        var setings = document.getElementById("bgFFF");
-        var downarrow = document.getElementById("downarrow");
-        // Şimdi body elementine bir özellik ekleyebilir veya üzerinde değişiklik yapabilirsiniz
-        bodys.style.backgroundColor = "#fff"; // Örneğin, arka plan rengini değiştirelim
-        bodys.style.color = "#000"; // Örneğin, arka plan rengini değiştirelim
-        for (var i = 0; i < divElements.length; i++) {
-            divElements[i].style.borderColor = '#000';
-        }
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].style.borderColor = '#000';
-            buttons[i].style.color = '#000';
-        }
-        for (var i = 0; i < svgs.length; i++) {
-            svgs[i].style.fill = '#000';
-        }
-        for (var i = 0; i < span.length; i++) {
-            span[i].style.color = "#000";
-        }
-        setings.style.backgroundColor = "#FFF";
-        downarrow.style.color = "#000";
-    }
+   
 </script>
 
 </html>

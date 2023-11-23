@@ -5,39 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark/Light Mode Toggle</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    
-    <h1>Dark/Light Mode Toggle</h1>
-    <label for="mode-toggle">Toggle Dark/Light Mode</label>
-    <input type="checkbox" id="mode-toggle">
-    <span>dawdada</span>
 
+    <div>
+        <button id="lightButton" onclick="setColorMode('light')">Light</button>
+        <button id="darkButton" onclick="setColorMode('dark')">Dark</button>
+        <button id="downarrow"></button>
+    </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const modeToggle = document.getElementById("mode-toggle");
+        function setColorMode(mode) {
+            var bodys = document.body;
+            var buttons = document.getElementsByTagName("button");
+            var divElements = document.getElementsByTagName("div");
+            var span = document.getElementsByClassName("acordionColor");
+            var svgs = document.getElementsByTagName("svg");
+            var setings = document.getElementById("lightButton");
+            var downarrow = document.getElementById("downarrow"); // Bu elementi doğru bir şekilde seçildiğinizden emin olun
 
-            // Check if user has a preference in local storage
-            const savedMode = localStorage.getItem("mode");
-            if (savedMode) {
-                document.body.classList.add(savedMode);
-                modeToggle.checked = savedMode === "dark-mode";
+            var backgroundColor = mode === "light" ? "#fff" : "#000";
+            var textColor = mode === "light" ? "#000" : "#fff";
+            var borderColor = mode === "light" ? '#000' : '#fff';
+            var svgFill = mode === "light" ? '#000' : '#fff';
+
+            bodys.style.backgroundColor = backgroundColor;
+            bodys.style.color = textColor;
+
+            for (var i = 0; i < divElements.length; i++) {
+                divElements[i].style.borderColor = borderColor;
             }
 
-            // Toggle mode when the checkbox changes
-            modeToggle.addEventListener("change", function () {
-                if (modeToggle.checked) {
-                    document.body.classList.add("dark-mode");
-                    localStorage.setItem("mode", "dark-mode");
-                } else {
-                    document.body.classList.remove("dark-mode");
-                    localStorage.setItem("mode", "light-mode");
-                }
-            });
-        });
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.borderColor = borderColor;
+                buttons[i].style.color = textColor;
+            }
+
+            for (var i = 0; i < svgs.length; i++) {
+                svgs[i].style.fill = svgFill;
+            }
+
+            for (var i = 0; i < span.length; i++) {
+                span[i].style.color = textColor;
+            }
+
+            setings.style.backgroundColor = backgroundColor;
+            downarrow.style.color = textColor;
+
+            localStorage.setItem('colorMode', mode);
+        }
+
+        window.onload = function () {
+            var mode = localStorage.getItem('colorMode');
+            if (!mode) {
+                mode = "light";
+            }
+            setColorMode(mode);
+        }
     </script>
+
 </body>
 <style>
     body {
@@ -50,12 +76,13 @@
         background-color: #333;
         color: #fff;
     }
-    span
-    {
+
+    span {
         color: pink;
     }
-    span.dark-mode{
-        color: pink !important ;
+
+    span.dark-mode {
+        color: pink !important;
     }
 </style>
 
