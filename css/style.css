@@ -3,10 +3,11 @@
 * {
     font-family: 'Inter', sans-serif;
 }
-svg
-{
+
+svg {
     fill: #000;
 }
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -58,13 +59,14 @@ svg
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid #000;
+    border: none;
     background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .SocialMedia:hover {
     transition: .3s;
-    border: 3px solid #28E98C !important;
 }
 
 .SocialMediaIcon {
@@ -90,19 +92,25 @@ svg
 .bgC4C4C4 {
     background-color: #c4c4c4;
 }
-#bgFFF
+.ps-45
 {
+    padding-left: 1.9rem;
+}
+#bgFFF {
     background-color: #FFF;
 }
 
+#bg000 {
+    background-color: #fff;
+}
 
 
 /* Color */
 .color28E98C {
     color: #28E98C;
 }
-.color000
-{
+
+.color000 {
     color: #000;
 }
 
@@ -136,6 +144,11 @@ svg
     font-size: 64px;
 }
 
+@media(max-width:767px) {
+    .fs64 {
+        font-size: 24px;
+    }
+}
 
 
 .infineteAnimation {
@@ -169,9 +182,23 @@ svg
     height: 150px;
 }
 
+@media(max-width:767px) {
+    .wh150 {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .wh120 {
     width: 120px;
     height: 120px;
+}
+
+@media(max-width:767px) {
+    .wh120 {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .wh50 {
@@ -183,11 +210,131 @@ svg
     max-width: 540px;
 }
 
+@media(min-width:1400px) {
+    .ressticky {
+        position: sticky;
+        top: 0;
+    }
+}
+
 .maxWidth330 {
     max-width: 330px;
 }
 
+@media(max-width:1400px) {
+    .maxWidth330 {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    .maxWidth330 {
+        max-width: 330px;
+    }
+}
+
+.headerImgSize {
+    max-width: 100%;
+}
+
+@media(max-width:1400px) {
+    .headerImgSize {
+        max-height: 100px;
+        max-width: 100PX;
+    }
+}
+
+@media(max-width:1200px) {
+    .headerImgSize {
+        max-height: 70px;
+        max-width: 70PX;
+    }
+}
+
+@media(max-width:767px) {
+    .headerImgSize {
+        max-width: 100%;
+        max-height: 50%;
+    }
+}
+
+.rw-75 {
+    max-width: 75%;
+}
+
+@media(max-width:1400px) {
+    .rw-75 {
+        max-width: 90%;
+    }
+}
+
+@media(max-width:1200px) {
+    .rw-75 {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    .rw-75 {
+        max-width: 75%;
+    }
+}
+
+.headerRFS {
+    font-size: 31px;
+}
+
+@media(max-width:1400px) {
+    .headerRFS {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:1000px) {
+    .headerRFS {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:767px) {
+    .headerRFS {
+        font-size: 24px;
+    }
+}
+
+.w400 {
+    width: 100%;
+}
+
+@media(max-width:1400px) {
+    .w400 {
+        width: 300px;
+    }
+}
+
+@media(max-width:1200px) {
+    .w400 {
+        width: 250px;
+    }
+}
+
+@media(max-width:930px) {
+    .w400 {
+        width: 190px;
+    }
+}
+
+@media(max-width:767px) {
+    .w400 {
+        width: 100%;
+    }
+}
+
 /* Acordion */
+.buttonsize {
+    width: 226px;
+    height: 48px;
+}
 
 .accordion-button {
     color: black;
@@ -217,19 +364,20 @@ svg
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
-.accordion-button::after
-{
+
+.accordion-button::after {
     width: 15px;
     height: 15px;
     background-image: none;
     background-color: #000;
-    clip-path: polygon( 49.586% 99.975%,49.586% 99.975%,50.429% 100.805%,51.351% 101.451%,52.334% 101.912%,53.356% 102.188%,54.398% 102.281%,55.44% 102.188%,56.462% 101.912%,57.444% 101.451%,58.367% 100.805%,59.21% 99.975%,100% 52.766%,100% 52.766%,100.717% 51.79%,101.275% 50.723%,101.673% 49.586%,101.912% 48.403%,101.992% 47.197%,101.912% 45.991%,101.673% 44.808%,101.275% 43.671%,100.717% 42.603%,100% 41.628%,100% 41.628%,99.157% 40.798%,98.234% 40.152%,97.252% 39.691%,96.23% 39.415%,95.188% 39.323%,94.146% 39.415%,93.124% 39.691%,92.142% 40.152%,91.219% 40.798%,90.376% 41.628%,54.387% 83.28%,18.398% 41.652%,18.398% 41.652%,17.555% 40.822%,16.632% 40.177%,15.65% 39.716%,14.628% 39.439%,13.586% 39.347%,12.544% 39.439%,11.522% 39.716%,10.54% 40.177%,9.617% 40.822%,8.774% 41.652%,8.774% 41.652%,8.057% 42.628%,7.499% 43.696%,7.101% 44.833%,6.862% 46.016%,6.782% 47.222%,6.862% 48.427%,7.101% 49.61%,7.499% 50.747%,8.057% 51.815%,8.774% 52.791%,49.564% 100% );
+    clip-path: polygon(49.586% 99.975%, 49.586% 99.975%, 50.429% 100.805%, 51.351% 101.451%, 52.334% 101.912%, 53.356% 102.188%, 54.398% 102.281%, 55.44% 102.188%, 56.462% 101.912%, 57.444% 101.451%, 58.367% 100.805%, 59.21% 99.975%, 100% 52.766%, 100% 52.766%, 100.717% 51.79%, 101.275% 50.723%, 101.673% 49.586%, 101.912% 48.403%, 101.992% 47.197%, 101.912% 45.991%, 101.673% 44.808%, 101.275% 43.671%, 100.717% 42.603%, 100% 41.628%, 100% 41.628%, 99.157% 40.798%, 98.234% 40.152%, 97.252% 39.691%, 96.23% 39.415%, 95.188% 39.323%, 94.146% 39.415%, 93.124% 39.691%, 92.142% 40.152%, 91.219% 40.798%, 90.376% 41.628%, 54.387% 83.28%, 18.398% 41.652%, 18.398% 41.652%, 17.555% 40.822%, 16.632% 40.177%, 15.65% 39.716%, 14.628% 39.439%, 13.586% 39.347%, 12.544% 39.439%, 11.522% 39.716%, 10.54% 40.177%, 9.617% 40.822%, 8.774% 41.652%, 8.774% 41.652%, 8.057% 42.628%, 7.499% 43.696%, 7.101% 44.833%, 6.862% 46.016%, 6.782% 47.222%, 6.862% 48.427%, 7.101% 49.61%, 7.499% 50.747%, 8.057% 51.815%, 8.774% 52.791%, 49.564% 100%);
     background-position: center;
 }
-.acordionColor
-{
+
+.acordionColor {
     color: #000;
 }
+
 .accordion-body {
     border: 2px solid #000;
     border-top: none;
@@ -292,7 +440,14 @@ input {
 
 
 .calcWidth {
-    width: calc(90%/2)
+    width: calc(90%/2);
+}
+
+@media(max-width:767px) {
+    .calcWidth {
+        width: 100%;
+    }
+
 }
 
 .brNone {
@@ -347,8 +502,22 @@ input {
     fill: #000;
 }
 
-.w60 {
+.w60px {
     width: 60px;
+}
+
+@media(max-width:1200px) {
+    .w60 {
+        width: 80%;
+    }
+
+}
+
+@media(max-width:767px) {
+    .w60 {
+        width: 100%;
+    }
+
 }
 
 .bgimage {
@@ -453,11 +622,11 @@ input::-webkit-inner-spin-button {
 .maxHeight410 {
     max-height: 410px;
 }
-.GreenHover:hover
-{
-    color:#28E98C!important;
+
+.GreenHover:hover {
+    color: #28E98C !important;
 }
-.hoverUnderline:hover
-{
+
+.hoverUnderline:hover {
     text-decoration: underline !important;
 }

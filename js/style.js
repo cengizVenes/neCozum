@@ -8,69 +8,13 @@ $('.Carousel1').owlCarousel({
             items: 1
         },
         600: {
-            items: 3
+            items: 2
         },
         1000: {
             items: 2
         }
     }
 });
-function LightMode() {
-    // Sayfanın body elementini seçme
-    var bodys = document.body;
-    var buttons = document.getElementsByTagName("button");
-    var divElements = document.getElementsByTagName("div");
-    var span = document.getElementsByClassName("acordionColor");
-    var svgs = document.getElementsByTagName("svg");
-    var setings = document.getElementById("bgFFF");
-    var downarrow = document.getElementById("downarrow");
-    // Şimdi body elementine bir özellik ekleyebilir veya üzerinde değişiklik yapabilirsiniz
-    bodys.style.backgroundColor = "#fff"; // Örneğin, arka plan rengini değiştirelim
-    bodys.style.color = "#000"; // Örneğin, arka plan rengini değiştirelim
-    for (var i = 0; i < divElements.length; i++) {
-        divElements[i].style.borderColor = '#000';
-    }
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].style.borderColor = '#000';
-        buttons[i].style.color = '#000';
-    }
-    for (var i = 0; i < svgs.length; i++) {
-        svgs[i].style.fill = '#000';
-    }
-    for (var i = 0; i < span.length; i++) {
-        span[i].style.color = "#000";
-    }
-    setings.style.backgroundColor = "#FFF";
-    downarrow.style.color = "#000";
-}
-function DarkMode() {
-    // Sayfanın body elementini seçme
-    var bodys = document.body;
-    var buttons = document.getElementsByTagName("button");
-    var divElements = document.getElementsByTagName("div");
-    var svgs = document.getElementsByTagName("svg");
-    var span = document.getElementsByClassName("acordionColor");
-    var setings = document.getElementById("bgFFF");
-    var downarrow = document.getElementById("downarrow");
-    // Şimdi body elementine bir özellik ekleyebilir veya üzerinde değişiklik yapabilirsiniz
-    bodys.style.backgroundColor = "#000"; // Örneğin, arka plan rengini değiştirelim
-    bodys.style.color = "#fff"; // Örneğin, arka plan rengini değiştirelim
-    for (var i = 0; i < divElements.length; i++) {
-        divElements[i].style.borderColor = '#fff';
-    }
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].style.borderColor = '#fff';
-        buttons[i].style.color = '#fff';
-    }
-    for (var i = 0; i < svgs.length; i++) {
-        svgs[i].style.fill = '#fff';
-    }
-    for (var i = 0; i < span.length; i++) {
-        span[i].style.color = '#fff';
-    }
-    setings.style.backgroundColor = "#000";
-    downarrow.style.color = "#fff";
-}
 function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
@@ -99,12 +43,15 @@ function setColorMode(mode) {
     var setings = document.getElementById("lightButton");
     var downarrow = document.getElementById("downarrow");
     var settings = document.getElementById("bgFFF");
+    var settingsbg = document.getElementById("bg000");
 
     var backgroundColor = mode === "light" ? "#fff" : "#000";
     var textColor = mode === "light" ? "#000" : "#fff";
     var borderColor = mode === "light" ? '#000' : '#fff';
     var svgFill = mode === "light" ? '#000' : '#fff';
-    var settingsModes = mode === "light" ? '#fff' : '#000'
+    var settingsModes = mode === "light" ? '#fff' : '#000';
+    var settingsModesbg = mode === "light" ? '#fff' : '#000';
+
  
     bodys.style.backgroundColor = backgroundColor;
     bodys.style.color = textColor;
@@ -125,6 +72,7 @@ function setColorMode(mode) {
     for (var i = 0; i < span.length; i++) {
         span[i].style.color = textColor;
     }
+    settingsbg.style.backgroundColor = settingsModesbg ;
     settings.style.backgroundColor = settingsModes ;
     setings.style.backgroundColor = backgroundColor;
     downarrow.style.color = textColor;
