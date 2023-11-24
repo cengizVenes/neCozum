@@ -84,6 +84,26 @@ svg {
 
 }
 
+.rw50 {
+    width: 100%;
+}
+
+@media(max-width:992px) {
+    .rw50 {
+        max-width: 540px;
+    }
+}
+
+.resBottom {
+    bottom: 15%;
+}
+
+@media(max-width:992px) {
+    .resBottom {
+        bottom: 60%;
+    }
+}
+
 /* Background Color */
 .bg28E98C {
     background-color: #28E98C;
@@ -92,10 +112,11 @@ svg {
 .bgC4C4C4 {
     background-color: #c4c4c4;
 }
-.ps-45
-{
+
+.ps-45 {
     padding-left: 1.9rem;
 }
+
 #bgFFF {
     background-color: #FFF;
 }
